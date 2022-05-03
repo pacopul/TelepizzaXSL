@@ -51,7 +51,12 @@
 											<h5 class="card-title"><xsl:value-of select="@nombre"/></h5>
 											<div class="row justify-content-between px-3">
 												<a href="#" class="text-secondary">Ver más</a>
-												<h5 class="card-text text-right text-secondary"><xsl:value-of select="precio"/> &euro;</h5>
+												<h5 class="card-text text-right text-secondary">
+												<xsl:if test="oferta=''">
+													<span class="text-danger">(Oferta) </span>
+												</xsl:if>
+												<xsl:value-of select="precio"/> &euro;
+												</h5>
 											</div>
 											<div class="text-right"><button class="btn btn-danger mt-3 px-4 py-2">AÑADIR</button></div>
 										</div>
